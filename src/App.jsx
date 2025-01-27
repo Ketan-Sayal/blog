@@ -43,7 +43,7 @@ function App() {
         }
       }catch(err){
         dispatch(logout());
-        console.log(err);
+        console.log(err.message);
         throw err;
         
       }finally{

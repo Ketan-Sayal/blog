@@ -10,12 +10,17 @@ export default function Post(){
     const {id} = useParams();
     const user = useSelector(state=>state.auth.userData);
     const posts = useSelector(state=>state.post.posts);
-    const post = posts.find(post=>String(post.$id) === String(id));
+    // console.log(posts);
+    
+    // posts.map((post)=>console.log(post));
+    const post = posts.find((post)=>post.$id===id);
+    
     // console.log(post.title);
+    // console.log(post);
     // console.log(post);
     
     // console.log(post);
-    console.log();
+    // console.log();
     
     
     const [imageUrl, SetImageUrl] = useState('');
@@ -53,7 +58,7 @@ export default function Post(){
         navigate(`/post/update/${post.$id}`);
     }
 
-    return user.$id===post.userId?(
+    return user?.$id===post.userId?(
     <div className="w-full min-h-screen bg-purple-100">
         <div className="w-full h-96 overflow-hidden">
            <div className="flex space-x-2">
