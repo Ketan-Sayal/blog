@@ -23,7 +23,7 @@ const router = createBrowserRouter(
       <Route path="/signup" element={<Signup/>}/>
       <Route path="/all-posts" element={<AuthLayout authentication><AllPosts/></AuthLayout>}/>
       <Route path="/create-post" element={<AuthLayout authentication><CreatePost/></AuthLayout>}/>
-      <Route path="/post/:id" element={<AuthLayout authentication={false}><Post/></AuthLayout>}/>
+      <Route path="/post/:id" element={<Post/>}/>
       <Route path="/post/update/:fileId" element={<AuthLayout authentication><UpdatePost/></AuthLayout>}/>
     </Route>
   )
