@@ -42,7 +42,7 @@ export class StorageService{
     }
     
     async getFilePreview(fileId){
-        let response = this.storage.getFilePreview(
+        let response = this.storage.getFileView(
             config.appwriteStorageId,
             fileId
         );
